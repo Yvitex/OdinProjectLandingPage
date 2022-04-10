@@ -11,11 +11,12 @@
 
 .main-content{
     margin-right: 50px;
+    min-width: 300px;
 }
 
 .main-topic img{
     border: white 2px double;
-    align-self: flex-end;
+    
 }
 
 .main-topic figure{
@@ -55,7 +56,7 @@ li{
 
 .random-information figure{
     border: black solid 1px;
-    width: 220px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,15 +64,19 @@ li{
     background-color: #1f2937;
     border-radius: 10px;
     color:#f9faf8;
-    text-align: center;
+    text-align: center;  
+    margin: 0;  
 }
 
 .random-information{
+    padding: 0;
+    gap: 10px;
     justify-content: center;
     margin-top: 100px;
+    flex-wrap: wrap;
 }
 
-h3{
+.random-info-title{
     text-align: center;
     text-decoration: underline;
 }
@@ -92,7 +97,32 @@ h3{
 body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
+
+/**{
+    border: #1f2937 solid;
+}*/
+
+.mini-box{
+    justify-content: center;
+    flex: 1;
+    background-color: #3882f6;
+    border-radius: 20px;
+    width: 50%;
+    min-width: 400px;
+    padding: 10px;
+}
+
+.mini-box h3, .mini-box p, .mini-box button{
+    margin: 4px;
+}
+
+.ending{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 
