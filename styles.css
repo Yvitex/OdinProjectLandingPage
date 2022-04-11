@@ -15,6 +15,16 @@
     min-width: 300px;
 }
 
+.main-content h1{
+    margin-bottom: 0;
+}
+
+.main-content button{
+    background-color: #3882f6;
+    border-color: #3882f6;
+    height: 27px;
+}
+
 .main-topic img{
     border: white 2px double;  
 }
@@ -131,12 +141,18 @@ body{
 }
 
 .subscribe-box{
-    margin: 10px 90px;
+    margin: 10px 50px;
 }
 
 .mini-box h3, .mini-box p, .mini-box button{
     margin: 4px;
     font-size: 15px;
+}
+
+.mini-box button{
+    background-color: red;
+    color: white;
+    font-weight: 700;
 }
 
 .ending{
