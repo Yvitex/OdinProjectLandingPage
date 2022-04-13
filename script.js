@@ -5,7 +5,7 @@ function clickers(){
     document.getElementById("ch-bg").classList.add("black-bg");
     if(index == true){
         let num = Math.floor(Math.random() * 3);
-        voice(ARRAY_CHAR[0]);
+        voice(ARRAY_CHAR[num]);
     }
  
 }
@@ -13,7 +13,7 @@ function clickers(){
 function voice(x){
     let sounds = new Audio();   
     switch(x){
-        case "Fischl": sounds.src= "./Msc/fischl.mp3";
+        case "Fischl": sounds.src= "./Msc/Fishcl_voice_2.mp3";
         sounds.play();
         environment("Fischl");  
         break;
@@ -49,5 +49,6 @@ function environment(name){
         break; 
     }
 }
+
 
 
