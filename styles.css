@@ -5,7 +5,7 @@
     z-index: 1;
 }
 
-.logo:hover{
+.logo-container:hover .logo{
     animation-name: shake;
     animation-duration: 1s;
 }
@@ -46,11 +46,6 @@
     transition-delay: 0.05s;
 }
 
-
-
-.top:hover{
-    left: 20px;
-}
 
 @keyframes appear-in{
     0%{
@@ -198,7 +193,11 @@ animation-delay: 1.5s;
 }
 
 .environment-bg-low{
-    background-image: url(./Images/environment.jpg);  
+    background-image: url(./Images/environment.jpg); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
 }
 
 
@@ -219,11 +218,13 @@ animation-delay: 1.5s;
 .hutao-bg{
     background-image: url("./Images/Hu_tao-reduced.gif");
     animation: top-transition 2s, top-transition-end 3s ease-in 5s;
+    background-position: center;
 }
 
 .frishcl-bg{
     background-image: url("./Images/Fischl_reduced.gif");
     animation: top-transition 2s, top-transition-end 2s ease-in 17s;
+    background-position: center;
 }
 
 .hutao-red-bg{
@@ -238,11 +239,13 @@ animation-delay: 1.5s;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .baal-bg{
     background-image: url("./Images/Baal_reduced.gif");
     animation: top-transition 2s, top-transition-end 3s ease-in 8s;
+    background-position: center;
 }
 
 .violet-baal-bg{
@@ -364,7 +367,7 @@ li{
 }
 
 .quote-container{
-    background-color: #e5e7eb;
+    background-color: black;
     font-size: 36px;
     font-style: italic;
     color: #1f2937;
@@ -377,7 +380,15 @@ li{
     margin-bottom: 100px;
     border-top: black 2px solid;
     border-bottom: black 2px solid;
+    box-shadow: inset 0 0 0 0 #e5e7eb;
+    transition: linear 0.1s;
+    
 }
+
+.quote-container{
+    box-shadow: inset 100vw 0 0 0 #e5e7eb;
+}
+
 
 .container-text{
     display: flex;
@@ -475,10 +486,6 @@ footer{
         align-items: center;
         text-align: center;  
         padding: 10px;
-    }
-
-    .header-links li a{
-        padding: 100px 0;
     }
 
     .main-topic .main-content{

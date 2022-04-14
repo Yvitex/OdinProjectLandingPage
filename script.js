@@ -4,6 +4,13 @@ let f = 18000;
 let b = 9000;
 let h = 5000;
 
+const top_bg = document.getElementById("top-background");
+const lower_bg = document.getElementById("lower-bg-change");
+const btn = document.getElementById("btn-start");
+const quote = document.getElementById("quote");
+const disappear = document.getElementById("will-disappear");
+const upper = document.getElementById("upper");
+
 // start on click
 function clickers(){ 
     document.getElementById("ch-bg").classList.add("black-bg");
@@ -36,57 +43,63 @@ function voice(x){
 
 // This call the environmental changes such as the backgrounds
 function environment(name){
-    document.getElementById("btn-start").disabled = true;
-    document.getElementById("quote").classList.add("quote-container-switch");
-    document.getElementById("will-disappear").style.visibility = "hidden";
+    btn.disabled = true;
+    quote.classList.add("quote-container-switch");
+    disappear.style.visibility = "hidden";
     document.getElementById("upper").classList.remove("environment-bg-low");
     switch(name){
 
-        case "Fischl": setTimeout(function(){document.getElementById("btn-start").disabled = false}, 20000);
+        case "Fischl": setTimeout(function(){btn.disabled = false}, 20000);
         Fischl_timeout();
-        document.getElementById("top-background").classList.add("frishcl-bg");  
-        document.getElementById("lower-bg-change").classList.add("frishl-light-bg");
+        top_bg.classList.add("frishcl-bg");  
+        lower_bg.classList.add("frishl-light-bg");
         break;
 
-        case "Baal": setTimeout(function(){document.getElementById("btn-start").disabled = false}, 11000);
+        case "Baal": setTimeout(function(){btn.disabled = false}, 11000);
         Baal_timeout();
-        document.getElementById("top-background").classList.add("baal-bg");
-        document.getElementById("lower-bg-change").classList.add("violet-baal-bg");
+        top_bg.classList.add("baal-bg");
+        lower_bg.classList.add("violet-baal-bg");
         break;
 
-        case "Hu_Tao": setTimeout(function(){document.getElementById("btn-start").disabled = false}, 8000);
+        case "Hu_Tao": setTimeout(function(){btn.disabled = false}, 8000);
         Hu_Tao_timeout();
-        document.getElementById("top-background").classList.add("hutao-bg");
-        document.getElementById("lower-bg-change").classList.add("hutao-red-bg");
+        top_bg.classList.add("hutao-bg");
+        lower_bg.classList.add("hutao-red-bg");
         break; 
     }
 
     //Hard coded timeout functions to enable and re-enable background and other css changes
 
     function Hu_Tao_timeout() {
-        setTimeout(function () { document.getElementById("top-background").classList.remove("hutao-bg"); }, h);
-        setTimeout(function () { document.getElementById("lower-bg-change").classList.remove("hutao-red-bg"); }, h);
-        setTimeout(function () { document.getElementById("quote").classList.remove("quote-container-switch"); }, h);
-        setTimeout(function () { document.getElementById("will-disappear").style.visibility = "visible"; }, h);
-        setTimeout(function () {document.getElementById("upper").classList.add("environment-bg-low")}, h);
+        setTimeout(function () { top_bg.classList.remove("hutao-bg"); }, h);
+        setTimeout(function () { lower_bg.classList.remove("hutao-red-bg"); }, h);
+        setTimeout(function () { quote.classList.remove("quote-container-switch"); }, h);
+        setTimeout(function () { disappear.style.visibility = "visible"; }, h);
+        setTimeout(function () { upper.classList.add("environment-bg-low")}, h);
     }
 
     function Baal_timeout() {
-        setTimeout(function () { document.getElementById("top-background").classList.remove("baal-bg"); }, b);
-        setTimeout(function () { document.getElementById("lower-bg-change").classList.remove("violet-baal-bg"); }, b);
-        setTimeout(function () { document.getElementById("quote").classList.remove("quote-container-switch"); }, b);
-        setTimeout(function () { document.getElementById("will-disappear").style.visibility = "visible"; }, b);
-        setTimeout(function () {document.getElementById("upper").classList.add("environment-bg-low")}, b);
+        setTimeout(function () { top_bg.classList.remove("baal-bg"); }, b);
+        setTimeout(function () { lower_bg.classList.remove("violet-baal-bg"); }, b);
+        setTimeout(function () { quote.classList.remove("quote-container-switch"); }, b);
+        setTimeout(function () { disappear.style.visibility = "visible"; }, b);
+        setTimeout(function () { upper.classList.add("environment-bg-low")}, b);
     }
 
     function Fischl_timeout() {
-        setTimeout(function () { document.getElementById("top-background").classList.remove("frishcl-bg"); }, f);
-        setTimeout(function () { document.getElementById("lower-bg-change").classList.remove("frishl-light-bg"); }, f);
-        setTimeout(function () { document.getElementById("quote").classList.remove("quote-container-switch"); }, f);
-        setTimeout(function () { document.getElementById("will-disappear").style.visibility = "visible"; }, f);
-        setTimeout(function () {document.getElementById("upper").classList.add("environment-bg-low")}, f);
+        setTimeout(function () { top_bg.classList.remove("frishcl-bg"); }, f);
+        setTimeout(function () { lower_bg.classList.remove("frishl-light-bg"); }, f);
+        setTimeout(function () { quote.classList.remove("quote-container-switch"); }, f);
+        setTimeout(function () { disappear.style.visibility = "visible"; }, f);
+        setTimeout(function () { upper.classList.add("environment-bg-low")}, f);
     }
 }
 
+
+function setup(){
+    const option = {
+        rootMargin: '0px 0px -200px 0px'
+    }
+}
 
 
