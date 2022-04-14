@@ -5,6 +5,31 @@
     z-index: 1;
 }
 
+.logo:hover{
+    animation-name: shake;
+    animation-duration: 1s;
+}
+
+@keyframes shake{
+    5%{
+        transform: rotateZ(10deg);
+    }
+    20%{
+        transform: rotateZ(-10deg);
+    }
+    35%{
+        transform: rotateZ(10deg);
+    }
+    50%{
+        transform: rotateZ(10deg);
+    }
+
+    60%{
+        transform: rotateZ(0deg);
+    }
+
+}
+
 .logo-container:hover .source-cont{
     visibility: visible;
     animation-name: appear-in;
@@ -18,7 +43,7 @@
     animation-fill-mode: forwards;
     visibility: hidden;
     transition-property: visibility;
-    transition-delay: 0.1s;
+    transition-delay: 0.05s;
 }
 
 
@@ -57,8 +82,14 @@
     border-radius: 5px;
     display: inline-block;
     visibility: hidden;
-
 }
+
+.source-cont:hover{
+    background-color: white;
+    opacity: 0.3;
+    color: black;
+}
+
 .top{
     display: flex;
     flex-direction: column;
@@ -172,9 +203,30 @@ animation-delay: 1.5s;
     animation: top-transition 2s, top-transition-end 2s ease-in 17s;
 }
 
+.hutao-red-bg{
+    background-image: url(./Images/Hutao-low.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.frishl-light-bg{
+    background-image: url(./Images/Fischl.full.3375955.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .baal-bg{
     background-image: url("./Images/Baal_reduced.gif");
     animation: top-transition 2s, top-transition-end 3s ease-in 8s;
+}
+
+.violet-baal-bg{
+    background-image: url(./Images/raiden.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 button:disabled{
@@ -200,9 +252,6 @@ button:disabled{
         background-position: 10000px;
     }
 }
-
-
-
 
 
 .black-bg{
@@ -287,7 +336,7 @@ li{
 
 .random-information{
     padding: 0;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     margin-top: 100px;
     flex-wrap: wrap;
@@ -326,6 +375,11 @@ li{
     color: #1f2937;
     align-self: flex-end;
     margin-top: 10px;
+}
+
+.quote-container-switch{
+    background-color: black;
+    color: white;
 }
 
 body{
