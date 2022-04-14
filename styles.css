@@ -132,9 +132,13 @@ a{
     align-items: center;
 }
 
+*{
+    border: black solid;
+}
+
 .header{
+    box-sizing: border-box;
     width: 100%;
-    gap: 200px;
     padding: 0 10px;
 }
 
