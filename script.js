@@ -11,6 +11,13 @@ const quote = document.getElementById("quote");
 const disappear = document.getElementById("will-disappear");
 const upper = document.getElementById("upper");
 
+let x = true;
+let bgm = new Audio();
+bgm.src = "./Msc/Song_of_innocence.mp3";
+if(x == true){
+    bgm.play();
+}
+
 // start on click
 function clickers(){ 
     document.getElementById("ch-bg").classList.add("black-bg");
@@ -97,9 +104,21 @@ function environment(name){
 
 
 function setup(){
-    const option = {
+    const options = {
         rootMargin: '0px 0px -200px 0px'
     }
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry =>{
+            if(entry.isIntersecting){
+                entry.target.classList.add("quote-container-tr");
+                observer.unobserve(entry.target);
+            }
+            else{ return;}
+        })
+    }, options);
 }
+const quoter = document.querySelector(".quote-container");
+observer.observe(quoter);
 
 
