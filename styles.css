@@ -1,3 +1,6 @@
+
+
+
 .logo{
     position: relative;
     height: auto;
@@ -75,7 +78,7 @@
     background-color:#1f2937;
     border: white solid 1px;
     border-radius: 5px;
-    display: inline-block;
+
     visibility: hidden;
 }
 
@@ -93,17 +96,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: #f9faf8;
-    align-self: center;
-}
-
-
-.logo-container p{
-    display: inline;
-    position: relative;
-    left: -50px;
-    top: -30px;
-    z-index: 0;
-    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 a{
@@ -123,6 +120,8 @@ a{
 .header, .main-topic, .random-information{
     margin: 10px 170px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -155,7 +154,7 @@ a{
 }
 
 .main-topic figure{
-margin: 20px 0px 30px 0;
+margin: 20px 0px 30px 30px;
 position: relative;
 top: 100px;
 opacity: 0;
@@ -190,14 +189,21 @@ animation-delay: 1.5s;
 .random-information-upper{
     padding-bottom: 100px;
     padding-top: 50px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .environment-bg-low{
     background-image: url(./Images/environment.jpg); 
+    padding-bottom: 100px;
+    padding-top: 50px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -210,10 +216,6 @@ animation-delay: 1.5s;
     align-items: center;
 }
 
-
-.lower-container{
-    width: 100%;
-}
 
 .hutao-bg{
     background-image: url("./Images/Hu_tao-reduced.gif");
@@ -285,10 +287,6 @@ button:disabled{
     opacity: 0.9;
 }
 
-.header-links{
-    margin-left: auto;
-}
-
 ul{
     padding: 0;
     margin: 0;
@@ -305,6 +303,10 @@ li{
     height: 200px;
     object-fit: cover;
     
+}
+
+.lower-container{
+    width: 100%;
 }
 
 .random-information figure{
@@ -385,7 +387,7 @@ li{
     
 }
 
-.quote-container{
+.quote-container-tr{
     box-shadow: inset 100vw 0 0 0 #e5e7eb;
 }
 
@@ -409,24 +411,15 @@ li{
     color: white;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
 
 .mini-box{
     justify-content: center;
     flex: 1;
     background-color: #3882f6;
     border-radius: 5px;
-    width: 40%;
-    min-width: 400px;
     padding: 10px;
     color: #e5e7eb;
-    height: 30px;
+    align-items: center;
 }
 
 .subscribe-box{
@@ -436,18 +429,29 @@ body{
 .mini-box h3, .mini-box p, .mini-box button{
     margin: 4px;
     font-size: 15px;
+    
 }
 
 .mini-box button{
     background-color: red;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
+    margin: unset;
+    align-self: center;
+    justify-content: center;
+}
+
+.mini-box a{
+    align-items: center;
 }
 
 .ending{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
 }
 
 
@@ -463,16 +467,26 @@ footer{
     font-size: 10px;
 }
 
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-@media (max-width: 500px){
+.main-topic .main-content{
+    margin-right: 0;
+    padding: 0;
+}
 
 
-    .logo-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+@media (max-width: 540px){
+    .mini-box button{
+        width: 90px;
+        font-size: 10px;
     }
 
+    
     .main-topic{
         flex-wrap: wrap;
         justify-content: center;
@@ -486,15 +500,47 @@ footer{
         align-items: center;
         text-align: center;  
         padding: 10px;
+        margin-left: auto;
     }
-
-    .main-topic .main-content{
-        margin-right: 0;
-        padding: 0;
-    }
-
-
    
+}
+
+@media (max-width: 280px) {
+    .main-topic{
+        font-size: 8px;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .mini-box button{
+        width: 50px;
+        font-size: 5px;
+    }
+
+    .main-content{
+        width: 280px;
+        min-width: auto;
+    }
+
+    .main-topic img{
+        width: 50%;
+    }
+}
+
+
+html, body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+*{
+    border: black solid;
 }
 
 
