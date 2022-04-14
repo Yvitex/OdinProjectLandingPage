@@ -117,7 +117,8 @@ a{
     padding: 0 10px;
 }
 
-a:hover{
+
+.header-links a:hover{
     color: black;
     background-color: white;
     opacity: 0.2;
@@ -191,7 +192,29 @@ animation-delay: 1.5s;
     }
 }
 
+.random-information-upper{
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
 
+.environment-bg-low{
+    background-image: url(./Images/environment.jpg);  
+}
+
+
+.random-information{
+    padding: 0;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.lower-container{
+    width: 100%;
+}
 
 .hutao-bg{
     background-image: url("./Images/Hu_tao-reduced.gif");
@@ -204,14 +227,14 @@ animation-delay: 1.5s;
 }
 
 .hutao-red-bg{
-    background-image: url(./Images/Hutao-low.jpg);
+    background-image: url(./Images/Hutao-low.jpg) !important;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .frishl-light-bg{
-    background-image: url(./Images/Fischl.full.3375955.jpg);
+    background-image: url(./Images/Fischl.full.3375955.jpg) !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -223,7 +246,7 @@ animation-delay: 1.5s;
 }
 
 .violet-baal-bg{
-    background-image: url(./Images/raiden.jpg);
+    background-image: url(./Images/raiden.jpg) !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -334,14 +357,6 @@ li{
 }
 
 
-.random-information{
-    padding: 0;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 100px;
-    flex-wrap: wrap;
-    align-items: center;
-}
 
 .random-info-title{
     text-align: center;
@@ -358,9 +373,10 @@ li{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 100px 0;
     width: 100%;
-
+    margin-bottom: 100px;
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
 }
 
 .container-text{
@@ -423,9 +439,6 @@ body{
     align-items: center;
 }
 
-.lower-container{
-    width: 100%;
-}
 
 footer{
     height: 50px;
@@ -464,8 +477,8 @@ footer{
         padding: 10px;
     }
 
-    .header-links li{
-        margin-top: 100px;
+    .header-links li a{
+        padding: 100px 0;
     }
 
     .main-topic .main-content{
