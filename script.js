@@ -1,3 +1,6 @@
+
+
+
 const ARRAY_CHAR = ["Fischl", "Baal", "Hu_Tao"];
 let index = true;
 let f = 18000;

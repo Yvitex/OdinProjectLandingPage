@@ -1,3 +1,7 @@
+body::after{
+    display: none;
+    content: url("./Images/Fischl_reduced.gif"), url("./Images/Baal_reduced.gif"), url("./Images/Hu_tao-reduced.gif");
+}
 
 .logo-container{
     display: flex;
@@ -19,7 +23,7 @@
     border: black solid;
     height: auto;
     position: absolute;
-    width: 300px;
+    max-width: 300px;
     visibility: hidden;
     z-index: 2;
 }
@@ -168,8 +172,6 @@ a{
 
 .main-content{
     margin-right: 50px;
-
-   
 }
 
 .main-topic{
@@ -293,7 +295,7 @@ animation-delay: 1.5s;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    background-attachment:fixed;
 }
 
 .baal-bg{
@@ -441,7 +443,6 @@ li{
    
 }
 
-
 .container-text{
     display: flex;
     flex-direction: column;
@@ -527,8 +528,24 @@ footer{
 }
 
 
-
 @media (max-width: 540px){
+
+    .credit-container{
+        opacity: 0.7;
+    }
+
+    .source-cont{
+        max-width: 40px;
+        font-size: 12px;
+    }
+
+    .main-topic figure{
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        
+    }
+
     .mini-box button{
         width: 90px;
         font-size: 10px;
@@ -540,6 +557,7 @@ footer{
         justify-content: center;
         text-align: center;
         padding: 0;
+        border: none;
     }
 
     .header-links{
@@ -549,6 +567,10 @@ footer{
         text-align: center;  
         padding: 10px;
         margin-left: auto;
+    }
+
+    li{
+        font-size: 10px;
     }
    
 }
