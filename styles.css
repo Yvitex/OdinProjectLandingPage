@@ -3,6 +3,13 @@ body::after{
     content: url("./Images/Fischl_reduced.gif"), url("./Images/Baal_reduced.gif"), url("./Images/Hu_tao-reduced.gif");
 }
 
+#hidden{
+    position: absolute;
+    z-index: -100;
+    display: hidden;
+    visibility: none;
+}
+
 .logo-container{
     display: flex;
     justify-content: center;
@@ -354,10 +361,10 @@ li{
 }
 
 .lower-container figure img{
-    width: 220px;
+    max-width: 220px;
     height: 200px;
     object-fit: cover;
-    
+    min-width: 50px;
 }
 
 .lower-container{
@@ -366,7 +373,7 @@ li{
 
 .random-information figure{
     border: black solid 1px;
-    width: 200px;
+    max-width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -416,11 +423,8 @@ li{
 
 }
 
-
-
-.random-info-title{
-    text-align: center;
-    text-decoration: underline;
+figcaption{
+    font-size: 1rem;
 }
 
 
