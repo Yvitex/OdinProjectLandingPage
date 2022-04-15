@@ -8,19 +8,18 @@
 
 .credit-container li{
     display: block;
+    word-wrap: break-word;
 }
 
 .credit-container{
     margin-top: 0px;
-    top: 70px;
-    left: 150px;
     border-radius: 10px;
     color: #e5e7eb;
     background: #1f2937;
     border: black solid;
-    height: 400px;
+    height: auto;
     position: absolute;
-    width: 500px;
+    width: 300px;
     visibility: hidden;
     z-index: 2;
 }
@@ -119,7 +118,7 @@
     visibility: hidden;
 }
 
-.source-cont:hover+.credit-container, .credit-container:hover{
+.source-cont:hover .credit-container, .credit-container:hover{
     visibility: visible;
 }
 
@@ -169,7 +168,7 @@ a{
 
 .main-content{
     margin-right: 50px;
-    min-width: 330px;
+
    
 }
 
@@ -177,7 +176,6 @@ a{
     padding: 20px 20px;
     border-radius: 5px;
     border: black solid 2px;
-    position: static;
 }
 
 .main-content h1{
@@ -235,7 +233,7 @@ animation-delay: 1.5s;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
 }
 
 
@@ -440,7 +438,7 @@ li{
     border-bottom: black 2px solid;
     box-shadow: inset 0 0 0 0 #5c5d61;
     transition: linear 0.2s;
-    
+   
 }
 
 
@@ -448,6 +446,7 @@ li{
     display: flex;
     flex-direction: column;
     padding: 0 20px;
+    padding: 0 30px;
 }
 
 .quote-container strong{
@@ -456,6 +455,7 @@ li{
     color: inherit;
     align-self: flex-end;
     margin-top: 10px;
+    
 }
 
 .quote-container-switch{
