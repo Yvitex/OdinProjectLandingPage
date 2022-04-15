@@ -10,13 +10,18 @@ const btn = document.getElementById("btn-start");
 const quote = document.getElementById("quote");
 const disappear = document.getElementById("will-disappear");
 const upper = document.getElementById("upper");
+const inner_text = document.getElementById("they-say");
+const character_in_quote = document.getElementById("character");
 
+
+/*
 let x = true;
 let bgm = new Audio();
 bgm.src = "./Msc/Song_of_innocence.mp3";
 if(x == true){
     bgm.play();
 }
+*/
 
 // start on click
 function clickers(){ 
@@ -60,18 +65,24 @@ function environment(name){
         Fischl_timeout();
         top_bg.classList.add("frishcl-bg");  
         lower_bg.classList.add("frishl-light-bg");
+        inner_text.innerText = "Oh, the sun's out.. *cough*. Um... this meteorological transformation is most splendid! Like a felicitous twist of fate in the face of certain doom ";
+        character_in_quote.innerHTML = "~Fischl";
         break;
 
         case "Baal": setTimeout(function(){btn.disabled = false}, 11000);
         Baal_timeout();
         top_bg.classList.add("baal-bg");
         lower_bg.classList.add("violet-baal-bg");
+        inner_text.innerText = "Inactivity serves no purpose whatsoever. Hmph";
+        character_in_quote.innerHTML = "~Baal";
         break;
 
         case "Hu_Tao": setTimeout(function(){btn.disabled = false}, 8000);
         Hu_Tao_timeout();
         top_bg.classList.add("hutao-bg");
         lower_bg.classList.add("hutao-red-bg");
+        inner_text.innerText = "*sigh* What a bummer...";
+        character_in_quote.innerHTML = "~Hu Tao";
         break; 
     }
 
@@ -103,22 +114,5 @@ function environment(name){
 }
 
 
-function setup(){
-    const options = {
-        rootMargin: '0px 0px -200px 0px'
-    }
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry =>{
-            if(entry.isIntersecting){
-                entry.target.classList.add("quote-container-tr");
-                observer.unobserve(entry.target);
-            }
-            else{ return;}
-        })
-    }, options);
-}
-const quoter = document.querySelector(".quote-container");
-observer.observe(quoter);
 
 

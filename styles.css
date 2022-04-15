@@ -1,8 +1,28 @@
+
 .logo-container{
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
 
+
+.credit-container li{
+    display: block;
+}
+
+.credit-container{
+    margin-top: 0px;
+    top: 70px;
+    left: 150px;
+    border-radius: 10px;
+    color: #e5e7eb;
+    background: #1f2937;
+    border: black solid;
+    height: 400px;
+    position: absolute;
+    width: 500px;
+    visibility: hidden;
+    z-index: 2;
 }
 
 .logo-container div{
@@ -86,15 +106,23 @@
     background-color:#1f2937;
     border: white solid 1px;
     border-radius: 5px;
-
     visibility: hidden;
 }
 
 .source-cont:hover{
-    background-color: white;
-    opacity: 0.3;
+
+    background-color: grey;
     color: black;
 }
+
+.source-cont:active{
+    visibility: hidden;
+}
+
+.source-cont:hover+.credit-container, .credit-container:hover{
+    visibility: visible;
+}
+
 
 .top{
     display: flex;
@@ -132,9 +160,6 @@ a{
     align-items: center;
 }
 
-*{
-    border: black solid;
-}
 
 .header{
     box-sizing: border-box;
@@ -202,6 +227,17 @@ animation-delay: 1.5s;
         top: 0px;
     }
 }
+
+.quote-end{
+    border-top: black 10px solid;
+    background-image: url(./Images/genshin-env.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 25px;
+}
+
 
 .random-information-upper{
     padding-bottom: 100px;
@@ -387,12 +423,12 @@ li{
     text-decoration: underline;
 }
 
+
 .quote-container{
-    background-color: black;
-    font-size: 36px;
+    visibility: hidden;
+    font-size: 25px;
     font-style: italic;
-    color: black;
-    
+    color: black;  
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -407,10 +443,6 @@ li{
     
 }
 
-.quote-container-tr{
-    background-color: white;
-    color: #1f2937;
-}
 
 .container-text{
     display: flex;
@@ -427,6 +459,7 @@ li{
 }
 
 .quote-container-switch{
+    visibility: visible;
     background-color: black;
     color: white;
 }
