@@ -1,13 +1,5 @@
 
-window.addEventListener("DOMContentLoaded", wait);
 
-function wait(){
-    setTimeout(function(){
-        document.getElementById("hidden").classList.add("hutao-bg");
-        document.getElementById("hidden").classList.add("baal-bg");
-        document.getElementById("hidden").classList.add("frishcl-bg");}, 4000);
-    
-}
 
 const ARRAY_CHAR = ["Fischl", "Baal", "Hu_Tao"];
 let index = true;
@@ -33,6 +25,13 @@ if(x == true){
     bgm.play();
 }
 */
+btn.disabled = true;
+window.addEventListener("DOMContentLoaded", function(){
+    btn.disabled = false;
+})
+
+//setTimeout(function(){btn.disabled = false}, 3000);
+
 
 // start on click
 function clickers(){ 
