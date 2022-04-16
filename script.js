@@ -26,12 +26,7 @@ if(x == true){
 }
 */
 btn.disabled = true;
-window.addEventListener("DOMContentLoaded", function(){
-    btn.disabled = false;
-})
-
-//setTimeout(function(){btn.disabled = false}, 3000);
-
+setTimeout(function(){btn.disabled = false}, 10000);
 
 // start on click
 function clickers(){ 
