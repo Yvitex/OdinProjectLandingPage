@@ -279,7 +279,7 @@ animation-delay: 1.5s;
 
 .hutao-bg{
     background-image: url("./Images/Hu_tao-reduced.gif");
-    animation: top-transition 2s, top-transition-end 3s ease-in 5s;
+    animation: top-transition 2s, top-transition-end 3s ease-in 4s;
     background-position: center;
 }
 

@@ -47,7 +47,7 @@ function clickers(){
     document.getElementById("ch-bg").classList.add("black-bg");
     if(index == true){
         let num = Math.floor(Math.random() * 3);
-        voice(ARRAY_CHAR[num]);
+        voice(ARRAY_CHAR[2]);
     }
  
 }
