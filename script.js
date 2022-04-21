@@ -1,6 +1,24 @@
 
 window.addEventListener("DOMContentLoaded", wait);
 
+function preloader(){
+    var i = 0;
+    imageObj = new Image();
+
+    images = new Array();
+    images[0]="./Images/Hu_tao-reduced.gif";
+    images[1]="./Images/Fischl_reduced.gif";
+    images[2]="./Images/Baal_reduced.gif";
+    images[3]="./Images/Hutao-low.jpg";
+    images[4]="./Images/Fischl.full.3375955.jpg";
+    images[5]="./Images/raiden.jpg";
+
+    for(i = 0; i < images.length; i++){
+        imageObj.src = images[i];
+    }
+
+}
+
 
 function wait(){
     setTimeout(function(){
@@ -47,7 +65,7 @@ function clickers(){
     document.getElementById("ch-bg").classList.add("black-bg");
     if(index == true){
         let num = Math.floor(Math.random() * 3);
-        voice(ARRAY_CHAR[2]);
+        voice(ARRAY_CHAR[num]);
     }
  
 }
