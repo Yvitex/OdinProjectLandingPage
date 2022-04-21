@@ -319,6 +319,47 @@ animation-delay: 1.5s;
     background-repeat: no-repeat;
 }
 
+.nico-bg{
+    background-image: url(./Images/nico-nico.png) !important;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.nippa-bg{
+    background-image: url(./Images/nippa-bg.jpg) !important;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.okabe-bg{
+    background-image: url(./Images/okabe-bg.jpg) !important;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.jotaro-bg{
+    background-image: url(./Images/jotaro-bg.png) !important;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+
 button:disabled{
     background-color: #1f2937;
     cursor: not-allowed;

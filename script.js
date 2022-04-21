@@ -20,6 +20,8 @@ function preloader(){
 }
 
 
+
+
 function wait(){
     setTimeout(function(){
         document.getElementById("hidden").classList.add("hutao-bg");
@@ -47,6 +49,14 @@ const inner_text = document.getElementById("they-say");
 const character_in_quote = document.getElementById("character");
 
 
+const rika = document.querySelector("#Rika");
+const nico = document.querySelector("#Nico");
+const okabe = document.querySelector("#Okabe");
+const jotaro = document.querySelector("#Jotaro");
+
+let sounds = new Audio();   
+
+
 /*
 let x = true;
 let bgm = new Audio();
@@ -72,7 +82,7 @@ function clickers(){
 
 //Sounds on button click
 function voice(x){
-    let sounds = new Audio();   
+    
     switch(x){
         case "Fischl": sounds.src= "./Msc/Fishcl_voice_2.mp3";
         sounds.play();
@@ -95,7 +105,7 @@ function environment(name){
     btn.disabled = true;
     quote.classList.add("quote-container-switch");
     disappear.style.visibility = "hidden";
-    document.getElementById("upper").classList.remove("environment-bg-low");
+    upper.classList.remove("environment-bg-low");
     switch(name){
 
         case "Fischl": setTimeout(function(){btn.disabled = false}, 20000);
@@ -149,6 +159,57 @@ function environment(name){
         setTimeout(function () { upper.classList.add("environment-bg-low")}, f);
     }
 }
+
+let voice_music = new Audio();
+
+nico.addEventListener('mouseenter', ()=>{
+    sounds.src = "./Msc/nico_voice.mp3";
+    upper.classList.remove("environment-bg-low");
+    upper.classList.add("nico-bg");
+    sounds.play();
+});
+
+nico.addEventListener('mouseleave', ()=>{
+    upper.classList.add("environment-bg-low");
+    upper.classList.remove("nico-bg");
+});
+
+
+okabe.addEventListener('mouseenter', ()=>{
+    sounds.src = "./Msc/sunnuva_voice.mp3";
+    upper.classList.remove("environment-bg-low");
+    upper.classList.add("okabe-bg");
+    sounds.play();
+});
+
+okabe.addEventListener('mouseleave', ()=>{
+    upper.classList.add("environment-bg-low");
+    upper.classList.remove("okabe-bg");
+});
+
+jotaro.addEventListener('mouseenter', ()=>{
+    sounds.src = "./Msc/muda_voice.mp3";
+    upper.classList.remove("environment-bg-low");
+    upper.classList.add("jotaro-bg");
+    sounds.play();
+});
+
+jotaro.addEventListener('mouseleave', ()=>{
+    upper.classList.add("environment-bg-low");
+    upper.classList.remove("jotaro-bg");
+});
+
+rika.addEventListener('mouseenter', ()=>{
+    sounds.src = "./Msc/nippa_voice.mp3";
+    upper.classList.remove("environment-bg-low");
+    upper.classList.add("nippa-bg");
+    sounds.play();
+});
+
+rika.addEventListener('mouseleave', ()=>{
+    upper.classList.add("environment-bg-low");
+    upper.classList.remove("nippa-bg");
+});
 
 
 
