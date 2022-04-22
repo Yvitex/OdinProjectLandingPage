@@ -12,12 +12,18 @@ function preloader(){
     images[3]="./Images/Hutao-low.jpg";
     images[4]="./Images/Fischl.full.3375955.jpg";
     images[5]="./Images/raiden.jpg";
+    images[6]="./Images/nico-nico.png";
+    images[7]="./Images/nippa-bg.jpg";
+    images[8]="./Images/okabe-bg.jpg";
+    images[9]="./Images/jotaro-bg.png";
 
     for(i = 0; i < images.length; i++){
         imageObj.src = images[i];
     }
 
 }
+
+
 
 
 
